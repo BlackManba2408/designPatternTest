@@ -41,7 +41,7 @@ class Children{
 
 }
 
-class Father implements Observer{
+class Father implements Observer {
     public void feed(){
         System.out.println("dad feeding...");
     }
@@ -52,7 +52,7 @@ class Father implements Observer{
     }
 }
 
-class Mother implements Observer{
+class Mother implements Observer {
     public void hug(){
         System.out.println("mam hugging...");
     }

@@ -10,11 +10,11 @@ public class Undercover implements Observer{
 
     @Override
     public void update(String context) {
+        System.out.println("卧底告诉警察："+context);
         arrest(context);
     }
 
     private void arrest(String context){
-        System.out.println("卧底告诉警察："+context);
-        System.out.println("警察出警逮捕他们！！！");
+        System.out.println("由于"+context+",警察出警逮捕他们！！！");
     }
 }

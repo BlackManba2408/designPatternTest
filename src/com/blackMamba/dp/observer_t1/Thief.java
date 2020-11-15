@@ -23,7 +23,7 @@ public class Thief implements Observable,IThief {
     @Override
     public void fight() {
         System.out.println("小偷打架ing");
-        String context = "小偷要偷打架了";
+        String context = "小偷要打架了";
         this.notifyObservers(context);
     }
 

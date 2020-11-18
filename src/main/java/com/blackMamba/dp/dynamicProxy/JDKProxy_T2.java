@@ -15,7 +15,7 @@ public class JDKProxy_T2 {
     public static void main(String[] args) {
         NikeFactory_T2 nikeFactory_t2 = new NikeFactory_T2();
         // 保存生成的代理文件
-        System.getProperties().put("jdk.proxy.ProxyGenerator.saveGeneratedFiles",true);
+        System.getProperties().put("jdk.proxy.ProxyGenerator.saveGeneratedFiles", "true");
         Clothe_T2 proxy = (Clothe_T2) Proxy.newProxyInstance(NikeFactory_T2.class.getClassLoader(),new Class[]{Clothe_T2.class},new MyInvocationHandler(nikeFactory_t2));
         proxy.makeClothes();
     }
@@ -49,7 +49,7 @@ class NikeFactory_T2 implements Clothe_T2{
     public void makeClothes() {
         System.out.println("生产NIKE的衣服");
         try{
-            Thread.sleep(new Random().nextInt(1000));
+            Thread.sleep(new Random().nextInt(10000));
         }catch(Exception e){
             e.printStackTrace();
         }
